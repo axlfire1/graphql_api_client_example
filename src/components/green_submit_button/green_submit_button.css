@@ -1,0 +1,24 @@
+input[type= submit] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  resize: vertical;
+  text-align: center;
+}
+
+.submitButton {
+  background-color: #0099cc;
+  color: #ffffff;
+}
+
+.submitButton:hover {
+  background-color: #00aacc;
+  color: #ffffff;
+}
+
+.submitButton:disabled,
+.submitButton[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
