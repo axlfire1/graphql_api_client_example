@@ -16,7 +16,7 @@ const Alert: React.FC<AlertProps> = (props) => {
 const SnackbarComponent: React.FC<SnackbarComponentProps> = ({ open, message, colorMessage, onClose }) => {
   return (
     <Snackbar open={open} autoHideDuration={6000} onClose={onClose}>
-      <Alert onClose={onClose} severity={colorMessage=='success' ? 'success' : 'error'}>
+      <Alert onClose={onClose} severity={colorMessage === 'success' ? 'success' : 'error'}>
         {message}
       </Alert>
     </Snackbar>
