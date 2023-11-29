@@ -1,13 +1,14 @@
-import { RegisterForm } from './components/register_form';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import NoPage from "./pages/no_page";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <RegisterForm />
-      </header>
-    </div>
+export default function App() {
+  return (<BrowserRouter>
+    <Routes>
+      <Route path='home' element={<Home />} />
+      <Route path="*" element={<NoPage />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
-
-export default App;
