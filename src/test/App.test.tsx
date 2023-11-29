@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App';
+import Home from '../pages/home';
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(<Home />);
   const btnSubmit = screen.getByText(/Registrar/i);
   expect(btnSubmit).toBeInTheDocument();
   expect(btnSubmit).toBeDisabled
 });
 
 test('input textfield is empty', () => {
-  const result = render(<App />);
+  const result = render(<Home />);
   const element = result.container.querySelector('#numeric_input');
   expect(element?.textContent).toEqual('');
 });
